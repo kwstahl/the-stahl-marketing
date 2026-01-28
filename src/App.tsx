@@ -58,9 +58,8 @@ function Layout() {
       <ScrollToTop />
 
       {/* Route content lazy-load boundary */}
-      <Suspense fallback={<PageLoader />}>
         <Outlet />
-      </Suspense>
+
 
       <Footer />
     </div>
