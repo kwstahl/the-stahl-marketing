@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import { Button } from '../components/Button';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { X } from 'lucide-react';
-import heroImage from 'figma:asset/e4dde5a024dd170af63724f2561fb5a0531229cd.png';
-import kevinImage from 'figma:asset/d40133888c2d3eca0eeb711573d6061dbb1c3a46.png';
-import ceciliaImage from 'figma:asset/f3d0448d221e0452c9ef95cc8eeaf309dfe7a36c.png';
-import leslieImage from 'figma:asset/14c6846232948b74c3ba7350f90ef6d60690003b.png';
-import studioImage1 from 'figma:asset/76668ec38e7513654f65df0914f40bc66d305eee.png';
-import studioImage2 from 'figma:asset/d8dafb88a0172584a97b9afe66f2584f933f7957.png';
+import heroImage from 'figma:asset/coverpage.png';
+import kevinImage from 'figma:asset/kevinImage.png';
+import ceciliaImage from 'figma:asset/ceciliaImage.png';
+import leslieImage from 'figma:asset/leslieImage.png';
+import studioImage1 from 'figma:asset/studioImage1.jpg';
+import studioImage2 from 'figma:asset/studioImage2.jpg';
 
 interface TeamMember {
   name: string;

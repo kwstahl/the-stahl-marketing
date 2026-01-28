@@ -1,9 +1,9 @@
 import { useParams, Link } from 'react-router-dom';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-import bioImage from 'figma:asset/39df135f46ca446ff8030c3c84778b8434d9a950.png';
-import journalImage1 from 'figma:asset/a47cad612f464234974faf0a63577ed5b3c76343.png';
-import journalImage2 from 'figma:asset/e4dde5a024dd170af63724f2561fb5a0531229cd.png';
-import journalImage3 from 'figma:asset/68fdc3058890d550b884e53cd023368d902a166d.png';
+import bioImage from 'figma:asset/emptyImage.png';
+import journalImage1 from 'figma:asset/emptyImage.png';
+import journalImage2 from 'figma:asset/emptyImage.png';
+import journalImage3 from 'figma:asset/emptyImage.png';
 
 // Blog post data
 const blogPosts = {

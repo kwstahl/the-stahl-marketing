@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '../components/Button';
 import { motion } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
-import heroImage from 'figma:asset/c62b1aacf7630fb18131f2364e107e9f67c84fcc.png';
+import pricingImage from 'figma:asset/pricingImage.jpg';
 
 export function Pricing() {
   return (
@@ -12,7 +12,7 @@ export function Pricing() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src={heroImage}
+            src={pricingImage}
             alt="Brand strategy materials"
             className="w-full h-full object-cover"
           />

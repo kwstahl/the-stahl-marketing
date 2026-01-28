@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Check, Sparkles, Target, Palette, FileText, Globe, TrendingUp } from 'lucide-react';
-import showcaseImage from 'figma:asset/6da2d585e5946df8b14d837ca969d3d161580902.png';
+import showcaseImage from 'figma:asset/showcaseImage.png';
 
 export function FullBrandSuitePackage() {
   const [scrollY, setScrollY] = useState(0);

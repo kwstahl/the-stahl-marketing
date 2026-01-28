@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Instagram, Facebook } from 'lucide-react';
-import logo from 'figma:asset/637dd926d3f037ef031670966b6cee507e9da6d1.png';
+import logo from 'figma:asset/logo.png';
 
 export function Footer() {
   return (
@@ -55,13 +55,13 @@ export function Footer() {
           </div>
 
           {/* Center Column - Logo + Copyright */}
-          <div className="flex flex-col items-center justify-center space-y-8 order-first md:order-none">
+          <div className="flex flex-col items-center justify-center space-y-8 order-first md:order-none h-28 md:h-32">
             <img 
               src={logo} 
               alt="The Stahl Marketing" 
-              className="h-20 md:h-24 w-auto"
+              className="w-40 md:w-44 lg:w-40 h-auto"
             />
-            <p className="text-white/60 text-sm">
+            <p className="text-white/60 text-sm" style={{ marginTop: "-1rem" }}>
               © 2026 The Stahl Marketing
             </p>
           </div>

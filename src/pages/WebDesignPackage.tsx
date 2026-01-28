@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Check, Globe, FileText, TrendingUp, Settings } from 'lucide-react';
-import webDesignImage1 from 'figma:asset/9d50a0b9d871ab1129182c31b65cf0eff1e4ee89.png';
-import webDesignImage2 from 'figma:asset/3ad15f224e349f0dd7e3a9e546f49388e1b295d1.png';
+import webDesignImage1 from 'figma:asset/servicesImage.jpg';
+import webDesignImage2 from 'figma:asset/webDesignImage2.jpg';
 
 export function WebDesignPackage() {
   const [scrollY, setScrollY] = useState(0);

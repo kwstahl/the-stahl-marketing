@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import { Button } from '../components/Button';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import heroImage from 'figma:asset/68fdc3058890d550b884e53cd023368d902a166d.png';
-import foundationImage from 'figma:asset/6da2d585e5946df8b14d837ca969d3d161580902.png';
-import websiteImage from 'figma:asset/9a1eeeef3993204a501e98133375ccac1162cc7f.png';
-import brandIdentityImage from 'figma:asset/11d897498e3b940742ff3d2abf7c6effc6b0c590.png';
-import socialMediaImage from 'figma:asset/a79afcfcf9559cf7f2a5f1730dde4e9263c4828e.png';
+import foundationImage from 'figma:asset/foundationImage.png';
+import websiteImage from 'figma:asset/detailsImage1.png';
+import brandIdentityImage from 'figma:asset/brandIdentityImage.png';
+import socialMediaImage from 'figma:asset/socialMediaImage.png';
 
 export function Services() {
   const [showAnnouncement, setShowAnnouncement] = useState(true);

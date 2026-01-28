@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { Briefcase, Heart, Lightbulb, Users, X } from 'lucide-react';
-import logo from 'figma:asset/637dd926d3f037ef031670966b6cee507e9da6d1.png';
+import logo from 'figma:asset/logo.png';
 
 export function Careers() {
   const [formData, setFormData] = useState({
