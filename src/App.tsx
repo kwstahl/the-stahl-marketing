@@ -56,8 +56,6 @@ function Layout() {
     <div className="bg-white">
       <Navigation />
       <ScrollToTop />
-
-      {/* Route content lazy-load boundary */}
         <Outlet />
 
 
