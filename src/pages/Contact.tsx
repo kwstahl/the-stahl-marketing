@@ -10,11 +10,26 @@ export function Contact() {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
     console.log('Form submitted:', formData);
-    alert('Thank you for your inquiry! We\'ll be in touch soon.');
+
+    const res = await fetch("api/lead", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(formData)
+    });
+
+    const json = await res.json().catch(()=>null);
+
+    console.log("json:", json);
+
+    if(!res.ok){
+      console.error("lead submit failed:", json);
+    }
+
+    alert(`Thank you for your inquiry! We\'ll be in touch soon. We receieved. Code: ${res.status}`);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
