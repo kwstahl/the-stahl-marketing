@@ -4,6 +4,7 @@ import {
   RouterProvider,
   Outlet,
 } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 
 import { Navigation } from "./components/Navigation";
 import { Footer } from "./components/Footer";
@@ -91,5 +92,10 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <RouterProvider router={router} />
+      <Analytics />
+    </>
+  );
 }
