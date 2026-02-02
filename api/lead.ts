@@ -1,23 +1,33 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 
-export default async function handler(
-    req: VercelRequest,
-    res: VercelResponse
-){
-    // Only allow POST
-    if (req.method !=="POST"){
-        return res.status(405).json({ok:false});
-    }
+import { createClient } from "@supabase/supabase-js";
 
-    try {
-        const body = req.body;
+const supabase = createClient(
+  process.env.VITE_PUBLIC__SUPABASE_URL!,
+  process.env.VITE_PUBLIC__SUPABASE_SERVICE_ROLE_KEY!,
+);
 
-        console.log("lead received", body);
+export default async function handler(req: VercelRequest, res: VercelResponse) {
+  // Only allow POST
+  if (req.method !== "POST") {
+    return res.status(405).json({ ok: false });
+  }
 
-        return res.status(200).json({ok:true});
+  const { name, email, company, service, message } = req.body;
+  const { error } = await supabase.from("leads").insert([
+    {
+      name,
+      email,
+      company,
+      service,
+      message,
+    },
+  ]);
 
-    } catch (err) {
-        console.error(err);
-        return res.status(500).json({ok:false});
-    }
+  if (error){
+    console.error("insert failed", error);
+    return res.status(500).json({ok:false, error:error.message});
+  }
+
+  return res.status(200).json({ ok: true });
 }
