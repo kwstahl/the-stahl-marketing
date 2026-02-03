@@ -7,7 +7,7 @@ export function Contact() {
     email: '',
     company: '',
     service: '',
-    message: ''
+    message: '',
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
