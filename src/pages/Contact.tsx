@@ -8,6 +8,7 @@ export function Contact() {
     company: '',
     service: '',
     message: '',
+    phone: '',
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -69,6 +70,22 @@ export function Contact() {
                 value={formData.name}
                 onChange={handleChange}
                 required
+                className="w-full px-6 py-4 border border-[#AC9F8D] bg-white text-[#000000] focus:border-[#0A203F] focus:outline-none transition-colors"
+              />
+            </div>
+
+
+            <div>
+              <label htmlFor="phone" className="block text-[#0A203F] mb-2">
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                value={formData.phone}
+                pattern="[0-9()+\-.\s]{7,20}"
+                onChange={handleChange}
                 className="w-full px-6 py-4 border border-[#AC9F8D] bg-white text-[#000000] focus:border-[#0A203F] focus:outline-none transition-colors"
               />
             </div>
