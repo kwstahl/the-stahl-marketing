@@ -29,8 +29,6 @@ export function Contact() {
     if(!res.ok){
       console.error("lead submit failed:", json);
     }
-
-    alert(`Thank you for your inquiry! We\'ll be in touch soon. We receieved. Code: ${res.status}`);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
