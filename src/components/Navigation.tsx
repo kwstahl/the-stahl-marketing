@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router";
 import { Button } from "./Button";
+import { primaryNav } from "./navConfig";
 import logo from "figma:asset/logo.png";
 import logoColored from "figma:asset/logocolored.png";
 
@@ -26,6 +27,7 @@ export function Navigation() {
     location.pathname === "/privacy-policy" ||
     location.pathname === "/terms-of-use";
 
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -41,11 +43,10 @@ export function Navigation() {
 
   return (
     <nav
-      className={`transition-all duration-300 ${
-        isHomePage
+      className={`transition-all duration-300 ${isHomePage
           ? "bg-black/30 backdrop-blur-sm"
           : "bg-white shadow-md"
-      }`}
+        }`}
     >
       {/* Top Bar */}
       <div className="max-w-7xl mx-auto px-8 py-6 flex items-center justify-between">
@@ -58,11 +59,11 @@ export function Navigation() {
           <img
             src={
               isAboutPage ||
-              isPackagesPage ||
-              isPricingPage ||
-              isJournalPage ||
-              isContactPage ||
-              isLegalPage
+                isPackagesPage ||
+                isPricingPage ||
+                isJournalPage ||
+                isContactPage ||
+                isLegalPage
                 ? logoColored
                 : logo
             }
@@ -73,32 +74,26 @@ export function Navigation() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-10">
-          <Link to="/about" className={`transition-colors duration-300 ${textColor}`}>
-            About
-          </Link>
-
-          <Link to="/services" className={`transition-colors duration-300 ${textColor}`}>
-            Packages
-          </Link>
-
-          <Link to="/pricing" className={`transition-colors duration-300 ${textColor}`}>
-            Pricing
-          </Link>
-
-          <Link to="/journal" className={`transition-colors duration-300 ${textColor}`}>
-            The Brand Journal
-          </Link>
+          {primaryNav.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              className={`transition-colors duration-300 ${textColor}`}
+            >
+              {item.label}
+            </Link>
+          ))}
 
           <Link to="/contact">
             <Button variant="primary">Inquire Today</Button>
           </Link>
         </div>
 
+
         {/* Mobile Hamburger */}
         <button
-          className={`md:hidden ${
-            isScrolled || !isHomePage ? "text-[#0A203F]" : "text-white"
-          }`}
+          className={`md:hidden ${isScrolled || !isHomePage ? "text-[#0A203F]" : "text-white"
+            }`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -112,9 +107,8 @@ export function Navigation() {
 
       {/* Mobile Accordion Menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ${
-          menuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`md:hidden overflow-hidden transition-all duration-300 ${menuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          }`}
       >
         <div className="shadow-md px-8 py-6 space-y-6 backdrop">
           <Link to="/about" onClick={() => setMenuOpen(false)} className={`block ${textColor}`}>
