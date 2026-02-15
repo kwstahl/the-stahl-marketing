@@ -10,6 +10,7 @@ import { Footer } from "./components/Footer";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { ChatWidget } from "./components/ChatWidget";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { Analytics } from "@vercel/analytics/react"
  
 
 // Keep shared UI eager (don’t lazy-load these)
@@ -63,6 +64,7 @@ function Layout() {
       <Footer />
       <ChatWidget />
       <SpeedInsights/>
+      <Analytics/>
     </div>
   );
 }
