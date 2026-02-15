@@ -11,6 +11,8 @@ export function Navigation() {
 
   const location = useLocation();
 
+
+
   const isHomePage = location.pathname === "/";
   const isAboutPage = location.pathname === "/about";
   const isPackagesPage =
@@ -29,23 +31,26 @@ export function Navigation() {
 
 
   useEffect(() => {
+    setMenuOpen(false);
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [location.pathname]);
 
   const textColor =
     isScrolled || !isHomePage
       ? "text-[#0A203F] hover:text-[#203F4F]"
       : "text-white/90 hover:text-white";
 
+  const mobileTextColor = "text-[#0A203F] hover:text-[#203F4F]";
+
   return (
     <nav
       className={`transition-all duration-300 ${isHomePage
-          ? "bg-black/30 backdrop-blur-sm"
-          : "bg-white shadow-md"
+        ? "bg-black/30 backdrop-blur-sm"
+        : "bg-white shadow-md"
         }`}
     >
       {/* Top Bar */}
@@ -111,20 +116,21 @@ export function Navigation() {
           }`}
       >
         <div className="shadow-md px-8 py-6 space-y-6 backdrop">
-          <Link to="/about" onClick={() => setMenuOpen(false)} className={`block ${textColor}`}>
-            About
-          </Link>
+          {primaryNav.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              onClick={() => setMenuOpen(false)}
+              className={`block ${mobileTextColor}`}
+            >
+              {item.label}
+            </Link>
+          ))}
 
-          <Link to="/services" onClick={() => setMenuOpen(false)} className={`block ${textColor}`}>
-            Packages
-          </Link>
-
-          <Link to="/pricing" onClick={() => setMenuOpen(false)} className={`block ${textColor}`}>
-            Pricing
-          </Link>
-
-          <Link to="/journal" onClick={() => setMenuOpen(false)} className={`block ${textColor}`}>
-            The Brand Journal
+          <Link to="/contact" onClick={() => setMenuOpen(false)} className="block pt-2">
+            <Button variant="primary" className="w-full">
+              Inquire Today
+            </Button>
           </Link>
         </div>
       </div>
