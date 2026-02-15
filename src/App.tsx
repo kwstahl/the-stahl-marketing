@@ -38,9 +38,7 @@ const BrandIdentityPackage = lazy(() =>
 const FullBrandSuitePackage = lazy(() =>
   import("./pages/FullBrandSuitePackage").then(m => ({ default: m.FullBrandSuitePackage }))
 );
-const SocialMediaPackage = lazy(() =>
-  import("./pages/SocialMediaPackage").then(m => ({ default: m.SocialMediaPackage }))
-);
+
 
 const FAQs = lazy(() => import("./pages/FAQs").then(m => ({ default: m.FAQs })));
 const Careers = lazy(() => import("./pages/Careers").then(m => ({ default: m.Careers })));
