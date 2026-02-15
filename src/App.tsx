@@ -9,7 +9,9 @@ import { Navigation } from "./components/Navigation";
 import { Footer } from "./components/Footer";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { ChatWidget } from "./components/ChatWidget";
+import { SpeedInsights } from "@vercel/speed-insights/react";
  
+
 // Keep shared UI eager (don’t lazy-load these)
 import StickyLeadChat from "./components/StickyLeadChat";
 
@@ -60,6 +62,7 @@ function Layout() {
       <Outlet />
       <Footer />
       <ChatWidget />
+      <SpeedInsights/>
     </div>
   );
 }
