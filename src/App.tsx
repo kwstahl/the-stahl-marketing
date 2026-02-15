@@ -4,6 +4,7 @@ import {
   RouterProvider,
   Outlet,
 } from "react-router-dom";
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 import { Navigation } from "./components/Navigation";
 import { Footer } from "./components/Footer";
@@ -60,6 +61,7 @@ function Layout() {
       <Outlet />
       <Footer />
       <ChatWidget />
+      <SpeedInsights />
     </div>
   );
 }
