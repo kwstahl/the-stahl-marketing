@@ -15,6 +15,9 @@ import { Analytics } from "@vercel/analytics/react"
 
 // Keep shared UI eager (don’t lazy-load these)
 import StickyLeadChat from "./components/StickyLeadChat";
+import { StahlLaunchPackage } from "./pages/StahlLaunchPackage";
+import { AuthorityWebsitePackage } from "./pages/AuthorityWebsitePackage";
+import { FullInfrastructurePackage } from "./pages/FullInfrastructurePackage";
 
 // Lazy-load PAGES
 const Home = lazy(() => import("./pages/Home").then(m => ({ default: m.Home })));
@@ -82,7 +85,9 @@ const router = createBrowserRouter([
       { path: "/services/web-design-package", element: <WebDesignPackage /> },
       { path: "/services/brand-identity-package", element: <BrandIdentityPackage /> },
       { path: "/services/full-brand-suite-package", element: <FullBrandSuitePackage /> },
-      { path: "/services/social-media-package", element: <SocialMediaPackage /> },
+      { path: "/services/stahl-launch-package", element: <StahlLaunchPackage /> },
+      { path: "/services/authority-website-package", element: <AuthorityWebsitePackage /> },
+      { path: "/services/full-infrastructure-package", element: <FullInfrastructurePackage /> },
 
       { path: "/contact", element: <Contact /> },
       { path: "/journal", element: <Journal /> },

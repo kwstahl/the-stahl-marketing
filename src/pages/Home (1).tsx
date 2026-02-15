@@ -1,17 +1,17 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { Button } from '../components/Button';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { useEffect, useState, useRef } from 'react';
-import heroImage from 'figma:asset/coverpage.png';
-import stahlLogo from 'figma:asset/logocolored.png';
-import detailsImage from 'figma:asset/detailsImage1.png';
-import detailsImage2 from 'figma:asset/detailsImage2.png';
-import detailsImage3 from 'figma:asset/detailsImage3.png';
-import detailsImage4 from 'figma:asset/detailsImage4.png';
-import servicesBackground from 'figma:asset/servicesImage.jpg';
-import journalImage1 from 'figma:asset/journal1.jpg';
-import journalImage2 from 'figma:asset/journal2.jpg';
-import journalImage3 from 'figma:asset/journal3.jpg';
+import heroImage from 'figma:asset/93ca7a2e2152f2c0b9d07305a843d188a3ab0227.png';
+import stahlLogo from 'figma:asset/fc3b4ca9425282473fa7aea4a6c47e3bf1b78068.png';
+import detailsImage from 'figma:asset/15075be94252ddae4e99a0010e32af9173f36683.png';
+import detailsImage2 from 'figma:asset/8c4e9091b1ad0397fae58564dfba3a5250f10036.png';
+import detailsImage3 from 'figma:asset/6c9709b4d940dabab1bbef0569a2874c6b3a727b.png';
+import detailsImage4 from 'figma:asset/53ff50e95575bb9fa729054cd3279b30f75b3e97.png';
+import servicesBackground from 'figma:asset/15f3d7e8e2ecc974da960c27342672b3cba5d9f0.png';
+import journalImage1 from 'figma:asset/a47cad612f464234974faf0a63577ed5b3c76343.png';
+import journalImage2 from 'figma:asset/e4dde5a024dd170af63724f2561fb5a0531229cd.png';
+import journalImage3 from 'figma:asset/68fdc3058890d550b884e53cd023368d902a166d.png';
 
 export function Home() {
   const [stickyImage1, setStickyImage1] = useState(false);
@@ -81,7 +81,7 @@ export function Home() {
       </section>
 
       {/* Scroll-Triggered Creative Image Section 1 */}
-      <section
+      <section 
         ref={imageSection1Ref}
         className="relative py-32 px-8 bg-white"
       >
@@ -150,7 +150,7 @@ export function Home() {
             </h2>
             <div className="w-24 h-[1px] bg-[#AC9F8D] mx-auto"></div>
           </div>
-
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-start mb-20">
             {/* Card 1 - Brand Identity */}
             <div className="bg-white/95 backdrop-blur-sm border border-[#0A203F]/10 p-12 hover:shadow-2xl transition-all duration-500 hover:border-[#0A203F]/20 group">
@@ -220,7 +220,6 @@ export function Home() {
           </div>
         </div>
       </section>
-
 
       {/* Brand Journal Highlight */}
       <section className="py-20 px-8 bg-white">
@@ -302,7 +301,7 @@ export function Home() {
       </section>
 
       {/* Secondary Image Scroll Moment */}
-      <section
+      <section 
         ref={imageSection2Ref}
         className="relative min-h-screen flex items-center py-32 px-8 bg-[#F5F3F0]"
       >
