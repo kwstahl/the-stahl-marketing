@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
-import { Button } from "../components/Button";
-import { motion } from "motion/react";
-import { ChevronDown } from "lucide-react";
-import pricingImage from "figma:asset/pricingImage.jpg";
+import { Link } from 'react-router';
+import { Button } from '../components/Button';
+import { motion } from 'motion/react';
+import { ChevronDown } from 'lucide-react';
+import heroImage from 'figma:asset/c62b1aacf7630fb18131f2364e107e9f67c84fcc.png';
 
 export function Pricing() {
   return (
@@ -11,8 +11,8 @@ export function Pricing() {
       <section className="relative min-h-screen flex items-center bg-[#F5F3F0]">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img
-            src={pricingImage}
+          <img 
+            src={heroImage}
             alt="Brand strategy materials"
             className="w-full h-full object-cover"
           />
@@ -34,12 +34,9 @@ export function Pricing() {
               We design strategic brands and websites that turn attention into trust — and trust into growth.
             </p>
             <Link to="/contact">
-              <motion.button
+              <motion.button 
                 className="bg-[#7B031E] text-white px-10 py-5 rounded-lg text-lg hover:bg-[#5a0216] transition-all shadow-md"
-                whileHover={{
-                  y: -3,
-                  boxShadow: "0 10px 25px -5px rgba(123, 3, 30, 0.3)",
-                }}
+                whileHover={{ y: -3, boxShadow: "0 10px 25px -5px rgba(123, 3, 30, 0.3)" }}
                 transition={{ duration: 0.2 }}
               >
                 Start Your Brand Alignment
@@ -50,9 +47,7 @@ export function Pricing() {
 
         {/* Scroll Cue */}
         <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-center z-10">
-          <p className="text-sm tracking-widest uppercase text-[#6F6C5D] mb-2">
-            What we help you build
-          </p>
+          <p className="text-sm tracking-widest uppercase text-[#6F6C5D] mb-2">What we help you build</p>
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
@@ -65,71 +60,51 @@ export function Pricing() {
       {/* Pricing Grid */}
       <section className="py-12 px-8 bg-[#F5F3F0]">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 mb-8 items-stretch">
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
             {/* Brand Identity Package */}
-            <div className="bg-white p-12 border border-[#AC9F8D]/30 flex flex-col h-full">
-              <p className="text-sm tracking-widest mb-4 uppercase text-[#6F6C5D]">
-                Visual Identity
-              </p>
+            <div className="bg-white p-12 border border-[#AC9F8D]/30">
+              <p className="text-sm tracking-widest mb-4 uppercase text-[#6F6C5D]">Visual Identity</p>
               <h2 className="text-4xl text-[#0A203F] mb-4 font-serif">
                 Brand Identity & Logo Design
               </h2>
               <p className="text-lg text-[#203F4F] mb-8 leading-relaxed">
                 A visual identity built on clarity, strategy, and alignment—not trends. For founders ready to move past the DIY phase.
               </p>
-
               <div className="mb-8">
                 <p className="text-5xl text-[#0A203F] font-serif mb-2">$2,000</p>
                 <p className="text-[#6F6C5D]">One-time investment</p>
               </div>
-
               <div className="mb-8 space-y-3">
                 <p className="text-[#203F4F]">Brand Strategy</p>
                 <p className="text-[#203F4F]">Comprehensive Logo Suite</p>
                 <p className="text-[#203F4F]">Brand Style Guide</p>
               </div>
-
-              {/* Pin CTA to bottom */}
-              <div className="mt-auto">
-                <Link to="/services/brand-identity-package">
-                  <Button variant="secondary" className="w-full">
-                    View Full Details
-                  </Button>
-                </Link>
-              </div>
+              <Link to="/services/brand-identity-package">
+                <Button variant="secondary" className="w-full">View Full Details</Button>
+              </Link>
             </div>
 
             {/* The Stahl Launch Package */}
-            <div className="bg-white p-12 border border-[#AC9F8D]/30 flex flex-col h-full">
-              <p className="text-sm tracking-widest mb-4 uppercase text-[#6F6C5D]">
-                Entry-Level Website
-              </p>
+            <div className="bg-white p-12 border border-[#AC9F8D]/30">
+              <p className="text-sm tracking-widest mb-4 uppercase text-[#6F6C5D]">Entry-Level Website</p>
               <h2 className="text-4xl text-[#0A203F] mb-4 font-serif">
                 The Stahl Launch™
               </h2>
               <p className="text-lg text-[#203F4F] mb-8 leading-relaxed">
                 Strategic one-page website built for early-stage founders. Conversion-focused and upgrade-ready without overbuilding.
               </p>
-
               <div className="mb-8">
                 <p className="text-5xl text-[#0A203F] font-serif mb-2">$1,200</p>
                 <p className="text-[#6F6C5D]">Starting price</p>
               </div>
-
               <div className="mb-8 space-y-3">
                 <p className="text-[#203F4F]">Custom One-Page Design</p>
                 <p className="text-[#203F4F]">Lead Capture Integration</p>
                 <p className="text-[#203F4F]">Mobile Optimization</p>
               </div>
-
-              {/* Pin CTA to bottom */}
-              <div className="mt-auto">
-                <Link to="/services/stahl-launch-package">
-                  <Button variant="secondary" className="w-full">
-                    View Full Details
-                  </Button>
-                </Link>
-              </div>
+              <Link to="/services/stahl-launch-package">
+                <Button variant="secondary" className="w-full">View Full Details</Button>
+              </Link>
             </div>
           </div>
 
@@ -137,13 +112,9 @@ export function Pricing() {
           <div className="bg-[#0A203F] p-12 md:p-16 text-white mb-8">
             <div className="max-w-4xl mx-auto">
               <div className="flex flex-wrap gap-2 mb-6">
-                <span className="bg-white/20 text-white text-xs tracking-widest px-3 py-1 rounded-full uppercase">
-                  Most Popular
-                </span>
+                <span className="bg-white/20 text-white text-xs tracking-widest px-3 py-1 rounded-full uppercase">Most Popular</span>
               </div>
-              <p className="text-sm tracking-widest mb-6 uppercase text-white/70">
-                Most Popular
-              </p>
+              <p className="text-sm tracking-widest mb-6 uppercase text-white/70">Most Popular</p>
               <h2 className="text-5xl md:text-6xl mb-6 leading-tight font-serif">
                 Squarespace Website Design
               </h2>
@@ -156,24 +127,16 @@ export function Pricing() {
               </div>
               <div className="grid md:grid-cols-4 gap-8 mb-12 text-center">
                 <div>
-                  <p className="text-sm text-white/80 uppercase tracking-wider">
-                    Deep Strategy
-                  </p>
+                  <p className="text-sm text-white/80 uppercase tracking-wider">Deep Strategy</p>
                 </div>
                 <div>
-                  <p className="text-sm text-white/80 uppercase tracking-wider">
-                    5-8 Custom Pages
-                  </p>
+                  <p className="text-sm text-white/80 uppercase tracking-wider">5-8 Custom Pages</p>
                 </div>
                 <div>
-                  <p className="text-sm text-white/80 uppercase tracking-wider">
-                    SEO Structure
-                  </p>
+                  <p className="text-sm text-white/80 uppercase tracking-wider">SEO Structure</p>
                 </div>
                 <div>
-                  <p className="text-sm text-white/80 uppercase tracking-wider">
-                    Launch Support
-                  </p>
+                  <p className="text-sm text-white/80 uppercase tracking-wider">Launch Support</p>
                 </div>
               </div>
               <Link to="/services/authority-website-package">
@@ -184,9 +147,7 @@ export function Pricing() {
 
           {/* Full Digital Infrastructure */}
           <div className="bg-white p-12 border border-[#AC9F8D]/30">
-            <p className="text-sm tracking-widest mb-4 uppercase text-[#6F6C5D]">
-              Complete Digital Foundation
-            </p>
+            <p className="text-sm tracking-widest mb-4 uppercase text-[#6F6C5D]">Complete Digital Foundation</p>
             <h2 className="text-4xl text-[#0A203F] mb-4 font-serif">
               The Stahl Foundation™
             </h2>
@@ -203,18 +164,14 @@ export function Pricing() {
               <p className="text-[#203F4F]">Complete SEO & Analytics Setup</p>
             </div>
             <Link to="/services/full-infrastructure-package">
-              <Button variant="secondary" className="w-full">
-                View Full Details
-              </Button>
+              <Button variant="secondary" className="w-full">View Full Details</Button>
             </Link>
           </div>
 
           {/* Additional Service - Brand Strategy */}
           <div className="grid md:grid-cols-1 gap-8 mt-8">
             <div className="bg-white p-12 border border-[#AC9F8D]/30">
-              <p className="text-sm tracking-widest mb-4 uppercase text-[#6F6C5D]">
-                Strategic Foundation
-              </p>
+              <p className="text-sm tracking-widest mb-4 uppercase text-[#6F6C5D]">Strategic Foundation</p>
               <h2 className="text-4xl text-[#0A203F] mb-4 font-serif">
                 Brand Strategy Session
               </h2>
@@ -231,18 +188,14 @@ export function Pricing() {
                 <p className="text-[#203F4F]">Implementation Guidance</p>
               </div>
               <Link to="/contact">
-                <Button variant="secondary" className="w-full">
-                  Book Your Session
-                </Button>
+                <Button variant="secondary" className="w-full">Book Your Session</Button>
               </Link>
             </div>
           </div>
 
           {/* CTA to Systems Page */}
           <div className="mt-12 text-center bg-[#F5F3F0] p-12 border border-[#AC9F8D]/30">
-            <h3 className="text-3xl text-[#0A203F] mb-4 font-serif">
-              Need Ongoing Support?
-            </h3>
+            <h3 className="text-3xl text-[#0A203F] mb-4 font-serif">Need Ongoing Support?</h3>
             <p className="text-lg text-[#203F4F] mb-6 leading-relaxed max-w-2xl mx-auto">
               Explore our Systems packages for technical infrastructure, automation, and ongoing website management.
             </p>
@@ -256,9 +209,7 @@ export function Pricing() {
       {/* Payment Plans */}
       <section className="py-12 px-8 bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl text-[#0A203F] mb-4 font-serif">
-            Payment Plans Available
-          </h2>
+          <h2 className="text-4xl md:text-5xl text-[#0A203F] mb-4 font-serif">Payment Plans Available</h2>
           <p className="text-xl text-[#203F4F] leading-relaxed">
             We offer 2-payment and 3-payment plans for all packages over $2,000. No interest, no hidden fees.
           </p>
@@ -268,33 +219,25 @@ export function Pricing() {
       {/* FAQ Section */}
       <section className="py-12 px-8 bg-[#AC9F8D]/10">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl text-[#0A203F] mb-8 font-serif text-center">
-            Common Questions
-          </h2>
-
+          <h2 className="text-4xl text-[#0A203F] mb-8 font-serif text-center">Common Questions</h2>
+          
           <div className="space-y-6">
             <div className="border-b border-[#AC9F8D] pb-6">
-              <h3 className="text-2xl text-[#0A203F] mb-3 font-serif">
-                How long does the process take?
-              </h3>
+              <h3 className="text-2xl text-[#0A203F] mb-3 font-serif">How long does the process take?</h3>
               <p className="text-lg text-[#203F4F] leading-relaxed">
                 Timelines vary by project. We'll outline a clear, realistic timeline during your strategy call so you know exactly what to expect.
               </p>
             </div>
 
             <div className="border-b border-[#AC9F8D] pb-6">
-              <h3 className="text-2xl text-[#0A203F] mb-3 font-serif">
-                What if I already have a logo?
-              </h3>
+              <h3 className="text-2xl text-[#0A203F] mb-3 font-serif">What if I already have a logo?</h3>
               <p className="text-lg text-[#203F4F] leading-relaxed">
                 No problem at all. We can build around your existing logo or design a custom scope that fills in what's missing.
               </p>
             </div>
 
             <div className="pb-6">
-              <h3 className="text-2xl text-[#0A203F] mb-3 font-serif">
-                Do you work with clients outside the U.S.?
-              </h3>
+              <h3 className="text-2xl text-[#0A203F] mb-3 font-serif">Do you work with clients outside the U.S.?</h3>
               <p className="text-lg text-[#203F4F] leading-relaxed">
                 Yes. We collaborate with clients worldwide using Zoom, email, and streamlined project management tools.
               </p>
