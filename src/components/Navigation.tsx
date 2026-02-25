@@ -14,7 +14,6 @@ export function Navigation() {
 
   
   const isHomePage = location.pathname === "/";
-  const isSystemsPage = location.pathname === "/systems";
   const isAboutPage = location.pathname === "/about";
   const isPackagesPage =
     location.pathname === "/services" ||
@@ -69,8 +68,7 @@ export function Navigation() {
                 isPricingPage ||
                 isJournalPage ||
                 isContactPage ||
-                isLegalPage ||
-                isSystemsPage
+                isLegalPage
                 ? logoColored
                 : logo
             }

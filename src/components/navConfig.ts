@@ -3,7 +3,6 @@ export const primaryNav = [
   { to: "/about", label: "About" },
   { to: "/services", label: "Packages" },
   { to: "/pricing", label: "Pricing" },
-  { to: "/systems", label: "Systems" },
   { to: "/journal", label: "The Brand Journal" },
 ] as const;
 

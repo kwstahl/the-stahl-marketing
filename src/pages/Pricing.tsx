@@ -237,19 +237,6 @@ export function Pricing() {
               </Link>
             </div>
           </div>
-
-          {/* CTA to Systems Page */}
-          <div className="mt-12 text-center bg-[#F5F3F0] p-12 border border-[#AC9F8D]/30">
-            <h3 className="text-3xl text-[#0A203F] mb-4 font-serif">
-              Need Ongoing Support?
-            </h3>
-            <p className="text-lg text-[#203F4F] mb-6 leading-relaxed max-w-2xl mx-auto">
-              Explore our Systems packages for technical infrastructure, automation, and ongoing website management.
-            </p>
-            <Link to="/systems">
-              <Button variant="secondary">Explore Systems</Button>
-            </Link>
-          </div>
         </div>
       </section>
 

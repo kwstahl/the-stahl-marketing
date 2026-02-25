@@ -195,11 +195,6 @@ export function FullInfrastructurePackage() {
             <p className="text-[#203F4F] mb-4">
               For ongoing technical support and automation, explore our Systems packages:
             </p>
-            <Link to="/systems">
-              <button className="bg-[#0A203F] text-white px-10 py-4 rounded-full text-lg hover:bg-[#203F4F] transition-colors shadow-lg">
-                View Systems Packages
-              </button>
-            </Link>
           </div>
         </div>
       </section>

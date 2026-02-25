@@ -27,7 +27,6 @@ const Pricing = lazy(() => import("./pages/Pricing").then(m => ({ default: m.Pri
 const Contact = lazy(() => import("./pages/Contact").then(m => ({ default: m.Contact })));
 const Journal = lazy(() => import("./pages/Journal").then(m => ({ default: m.Journal })));
 const BlogPost = lazy(() => import("./pages/BlogPost").then(m => ({ default: m.BlogPost })));
-const Systems = lazy(() => import("./pages/Systems").then(m=>({default: m.Systems})));
 
 const WebDesignPackage = lazy(() =>
   import("./pages/WebDesignPackage").then(m => ({ default: m.WebDesignPackage }))
@@ -95,7 +94,6 @@ const router = createBrowserRouter([
       { path: "/careers", element: <Careers /> },
       { path: "/privacy-policy", element: <PrivacyPolicy /> },
       { path: "/terms-of-use", element: <TermsOfUse /> },
-      { path: "/systems", element: <Systems /> }, 
     ],
   },
 ]);

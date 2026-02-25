@@ -214,9 +214,6 @@ export function Home() {
             <p className="text-[#6F6C5D] mb-6 text-lg">
               Need ongoing support and technical infrastructure?
             </p>
-            <Link to="/systems" className="inline-flex items-center gap-3 text-[#0A203F] tracking-[0.2em] text-sm uppercase hover:text-[#203F4F] transition-colors group">
-              EXPLORE SYSTEMS <span className="group-hover:translate-x-1 transition-transform">→</span>
-            </Link>
           </div>
         </div>
       </section>

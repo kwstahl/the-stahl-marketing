@@ -51,7 +51,7 @@ export function Footer() {
               </h4>
               <nav className="flex flex-col space-y-3">
                 {primaryNav
-                  .filter((item) => item.to !== "/journal" && item.to !== "/systems") // optional if you don’t want these in footer
+                  .filter((item) => item.to !== "/journal") // optional if you don’t want these in footer
                   .map((item) => (
                     <Link
                       key={item.to}
