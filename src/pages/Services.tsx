@@ -90,16 +90,6 @@ export function Services() {
             </Link>
           </div>
         </div>
-
-        {/* CTA to Systems Page */}
-        <div className="max-w-6xl mx-auto mt-12 text-center">
-          <p className="text-white/80 mb-6 text-lg">
-            Need ongoing support and technical infrastructure?
-          </p>
-          <Link to="/systems" className="inline-flex items-center gap-3 text-white tracking-[0.2em] text-sm uppercase hover:text-[#AC9F8D] transition-colors group">
-            EXPLORE SYSTEMS <span className="group-hover:translate-x-1 transition-transform">→</span>
-          </Link>
-        </div>
       </section>
 
       {/* Moving Marquee Text */}
