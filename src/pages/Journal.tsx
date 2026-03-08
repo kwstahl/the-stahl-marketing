@@ -1,9 +1,9 @@
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Link } from 'react-router-dom';
 import bioImage from 'figma:asset/39df135f46ca446ff8030c3c84778b8434d9a950.png';
-import journalImage1 from 'figma:asset/journal1.jpg';
-import journalImage2 from 'figma:asset/journal2.jpg';
-import journalImage3 from 'figma:asset/journal3.jpg';
+import journalImage1 from 'figma:asset/journal1.webp';
+import journalImage2 from 'figma:asset/journal2.webp';
+import journalImage3 from 'figma:asset/journal3.webp';
 
 export function Journal() {
   return (

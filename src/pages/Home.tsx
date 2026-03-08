@@ -8,10 +8,10 @@ import detailsImage from 'figma:asset/detailsImage1.png';
 import detailsImage2 from 'figma:asset/detailsImage2.png';
 import detailsImage3 from 'figma:asset/detailsImage3.png';
 import detailsImage4 from 'figma:asset/detailsImage4.png';
-import servicesBackground from 'figma:asset/servicesImage.jpg';
-import journalImage1 from 'figma:asset/journal1.jpg';
-import journalImage2 from 'figma:asset/journal2.jpg';
-import journalImage3 from 'figma:asset/journal3.jpg';
+import servicesBackground from 'figma:asset/servicesImage.webp';
+import journalImage1 from 'figma:asset/journal1.webp';
+import journalImage2 from 'figma:asset/journal2.webp';
+import journalImage3 from 'figma:asset/journal3.webp';
 
 export function Home() {
   const [stickyImage1, setStickyImage1] = useState(false);
@@ -207,13 +207,6 @@ export function Home() {
                 LEARN MORE <span>→</span>
               </Link>
             </div>
-          </div>
-
-          {/* CTA to Systems Page */}
-          <div className="mt-16 text-center">
-            <p className="text-[#6F6C5D] mb-6 text-lg">
-              Need ongoing support and technical infrastructure?
-            </p>
           </div>
         </div>
       </section>
